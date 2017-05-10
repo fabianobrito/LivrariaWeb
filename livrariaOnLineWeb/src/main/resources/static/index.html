@@ -1,22 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-  	<base href="/" />
-  	<meta charset="utf-8" />
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />
-    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="./bower_components/angular-resource/angular-resource.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-    <script type="text/javascript" src="./js/app/Controllers/controllers.js"></script>
-    <script type="text/javascript" src="./js/app/Services/services.js"></script>
-  </head>
-  <body ng-app="livrariaWeb">
-    <div class="container" ng-controller="AppController">
-      <section>
-      	<h1>{{boasvindas}}</h1>
-      </section>
-    </div>
-  </body>
+<html lang="pt-br" ng-app="livrariaWeb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <base href="/">
+        <title>LivrariaWeb</title>
+        <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="./bower_components/admin-lte/dist/css/AdminLTE.min.css">
+		<link rel="stylesheet" href="./bower_components/admin-lte/dist/css/skins/_all-skins.min.css">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    </head>
+    <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
+	    <div class="wrapper">	   
+			<header class="main-header">
+				    <a href="#" class="logo">
+				      <span class="logo-mini"><b>A</b>LT</span>
+				      <span class="logo-lg"><b>Admin</b>LTE</span>
+				    </a>				    
+				    <nav class="navbar navbar-static-top">
+				      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </a>
+				    </nav>
+			</header>
+		  	<aside class="main-sidebar">
+		  		<section class="sidebar">
+					<ul class="sidebar-menu">
+					   <li class="header">MAIN NAVIGATION</li>
+					   <li class="treeview">
+					     <a href="#">
+					       <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+					       <span class="pull-right-container">
+					         <i class="fa fa-angle-left pull-right"></i>
+					       </span>
+					     </a>
+					     <ul class="treeview-menu">
+					       <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+					       <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+					     </ul>
+					   </li>
+					</ul>
+		  		</section>
+		  	</aside>
+		  	<div class="content-wrapper">
+				<section class="content-header">
+				  <h1>Sidebar Collapsed <small>Layout with collapsed sidebar on load</small></h1>
+						<ol class="breadcrumb">
+						  <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+						  <li><a href="#">Layout</a></li>
+						  <li class="active">Collapsed Sidebar</li>
+						</ol>
+				</section>
+				<section class="content">
+					<ng-view></ng-view>
+				</section>
+		  	</div>
+			<footer class="main-footer">
+				 <div class="pull-right hidden-xs">
+				   <b>Version</b> 2.3.8
+				 </div>
+				 <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+			</footer>		    
+	    </div>    
+	   	<script src="./bower_components/angular/angular.min.js"></script>
+	    <script src="./bower_components/angular-resource/angular-resource.min.js"></script>
+	    <script src="./bower_components/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+	    <script src="./bower_components/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>	    
+	    <script src="./bower_components/admin-lte/dist/js/app.min.js"></script>
+		<script src="./bower_components/admin-lte/dist/js/demo.js"></script>  
+	    <script src="./js/main.js"></script>
+	    <script src="./js/app/Controllers/home-controller.js"></script>
+	    <script src="./js/app/Services/services.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>         
+    </body>
 </html>
