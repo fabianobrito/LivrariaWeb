@@ -1,4 +1,4 @@
-package br.org.indt;
+package br.org.indt.Configurations;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
