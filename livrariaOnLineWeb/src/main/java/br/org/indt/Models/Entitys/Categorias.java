@@ -10,25 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Editoras {
+public class Categorias {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-
+	
 	@Column
-	private String nome;
-
+	private String genero;
+	
 	@ManyToOne
 	private List<Livros> livros;
-
-	public List<Livros> getLivros() {
-		return livros;
-	}
-
-	public void setLivros(List<Livros> livros) {
-		this.livros = livros;
-	}
 
 	public long getId() {
 		return id;
@@ -38,11 +30,19 @@ public class Editoras {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getGenero() {
+		return genero;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public List<Livros> getLivros() {
+		return livros;
+	}
+
+	public void setLivros(List<Livros> livros) {
+		this.livros = livros;
 	}
 }
