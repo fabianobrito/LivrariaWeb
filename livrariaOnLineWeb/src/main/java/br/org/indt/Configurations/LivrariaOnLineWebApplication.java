@@ -17,7 +17,7 @@ public class LivrariaOnLineWebApplication {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("mysql:jdbc://127.0.0.1:3306/heroku_e28fbd907984c36");
+		dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/heroku_e28fbd907984c36");
 		dataSource.setUsername("root");
 		dataSource.setPassword("farah");		
 		return dataSource;
